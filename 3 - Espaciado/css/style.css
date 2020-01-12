@@ -10,6 +10,15 @@ body {
   /* Para definir en una sola línea las filas y columas se utiliza lo siguiente */
   /* grid-template: filas / columnas; */
   grid-template: 300px 100px 100px / 50% 200px 100px;
+
+  /* Grid Gap para columnas - espaciado*/
+  /* column-gap: 30px; */
+
+  /* Grid Gap para filas - espaciado*/
+  /* row-gap: 30px; */
+
+  /* Grid Gap para filas y columnas - espaciado*/
+  gap: 10px 20px;
 }
 
 .item {
