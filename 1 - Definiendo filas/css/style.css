@@ -6,6 +6,7 @@ body {
   display: grid;
   /* grid-template-columns: 25% 50% 25%; */
   /* grid-template-rows: 300px 300px; */
+
   /* Para definir en una sola línea las filas y columas se utiliza lo siguiente */
   /* grid-template: filas / columnas; */
   grid-template: 300px 100px / 25% 50% 25%;
