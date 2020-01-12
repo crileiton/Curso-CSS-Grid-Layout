@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+}
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  height: 100vh;
+  gap: 10px;
+}
+
+/* Espaciado entre columnas */
+/* Se escoge el primer item */
+.item:nth-of-type(1) {
+  background: blue;
+  /* Para que el primer item ocupe 2 espacios se debe decirle donde empieza y donde termina */
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* Elemento 8 */
+.item:nth-of-type(8) {
+  background: yellow;
+  /* Para que el primer item ocupe 2 espacios se debe decirle donde empieza y donde termina  en una sola linea*/
+
+  /* Si se quiere que ocupe todas las columnas que existen disponibles*/
+  grid-column: 1 / -1;
+}
+
+/* Elemento 7 */
+.item:nth-of-type(7) {
+  background: green;
+  /* Para que el primer item ocupe 2 espacios se debe decirle donde empieza y donde termina  en una sola linea*/
+
+  /* Si no se sabe donde termina y quiero que ocupe 2 espacios se pone span  */
+  grid-column: 1 / span 2;
+}
