@@ -1,0 +1,55 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 25% 50% 25%; */
+  /* grid-template-rows: 300px 300px; */
+
+  /* Para definir en una sola línea las filas y columas se utiliza lo siguiente */
+  /* grid-template: filas / columnas; */
+  /* grid-template: 300px 100px 100px / 50% 200px 100px; */
+
+  /* Grid Gap para columnas - espaciado*/
+  /* column-gap: 30px; */
+
+  /* Grid Gap para filas - espaciado*/
+  /* row-gap: 30px; */
+
+  /* Grid Gap para filas y columnas - espaciado*/
+  gap: 10px;
+
+  /* Nueva unidad de medida: fracciones - fr */
+  /* grid-template: 300px 100px 100px / 1fr 1fr 1fr; */
+
+  /* Repetir configuración */
+  /* grid-template: 300px 100px 100px / repeat(3, 1fr); */
+
+  /* Minimos y maximos - minimo 200px y maximo 1fr */
+  grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+}
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/* Toma el elemento de tipo ITEM (en este caso) que le diga (en este ejemplo el cuarto - 4) */
+.item:nth-of-type(4) {
+  background: blue;
+  overflow: auto;
+
+  /* Nota: Aun no funciona -  Subgrid heredaria los tamaños de las filas y columnas del padre */
+  /* display: subgrid; */
+  display: grid;
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+
+  /* Nota: Aun no funciona -  Otro tipo de display: Genera un display sin filas ni columnas*/
+  /* display: inline-grid; */
+}
+
+.item .item {
+  background: yellow;
+}
