@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.post {
+  /* Sale la mano cuando este dentro del post */
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  display: block;
+}
+
+.post-image {
+  /* Margin de 0 porque el figure por defecto tiene margen */
+  margin: 0;
+}
+
+.post-image img {
+  /* Ancho 100% del cuadro del grid */
+  width: 100%;
+  vertical-align: top;
+}
+
+.post-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+.post-likes,
+.post-commnents {
+  width: 80px;
+  height: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  gap: 5px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 100px);
+
+  /* Alineando todo el contenido */
+  /* Posibilidades para justify-content y align-content: start end center stretch space-around space-between space-evenly*/
+  justify-content: center;
+  align-content: center;
+}
