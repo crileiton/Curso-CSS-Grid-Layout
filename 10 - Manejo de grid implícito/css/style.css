@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+}
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [inicio] 1fr [dos] 1fr [tres] 1fr [destacado-end] 1fr [cinco]1fr [destacado2-end]1fr [siete] 1fr [final];
+  grid-template-rows: [inicio] 200px [dos] 200px [final];
+  height: 100vh;
+  gap: 5px;
+
+  /* Manejo de grid implicito */
+
+  /* Manejo a nivel de columnas */
+  /* grid-auto-flow: column; */
+  /* Manejo de las columnas que sobran: tamaño */
+  /* grid-auto-columns: 200px 50px 300px 1fr; */
+
+  /* Manejo de las filas que sobran: tamaño */
+  /* Primera fila de 50px y la segunda de 100px */
+  grid-auto-rows: 50px 100px;
+}
+
+.item:nth-of-type(1) {
+  grid-column: inicio / destacado-end;
+  grid-row: inicio / final;
+}
+
+.item:nth-of-type(2) {
+  grid-column: destacado-end / destacado2-end;
+  grid-row: inicio / final;
+}
+
+.item:nth-of-type(3) {
+  grid-column: destacado2-end / final;
+}
