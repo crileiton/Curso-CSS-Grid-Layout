@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+}
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  /* Alineación de contenido */
+  /* Alineado de forma horizontal */
+  /* justify-item recibe valores: start end center stretch - stretch: estira el contenido en el grid*/
+  justify-items: center;
+  /* Alineado de forma vertical */
+  /* align-item recibe valores: start end center stretch - stretch: estira el contenido en el grid */
+  align-items: center;
+}
+
+.item:nth-of-type(5) {
+  /* Alinear un solo elemento */
+  align-self: start;
+  justify-self: start;
+}
